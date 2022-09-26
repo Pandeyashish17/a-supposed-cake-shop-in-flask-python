@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="stylesheet" href="/static/css/style.css" />
+
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/static/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/static/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/static/favicon-16x16.png"
+    />
+    <link rel="manifest" href="/site.webmanifest" />
+    <title>A Supposed cake shop</title>
+  </head>
+  <body class="bg-slate-200">
+    <!-- Navbar -->
+     <header class="py-3 border-b">
+      <div class="container max-w-screen-xl mx-auto px-4">
+        <div class="flex flex-wrap items-center">
+          <div class="flex-shrink-0 mr-5">
+            <a class="flex items-center justify-center"> FindYourCake </a>
+          </div>
+
+          <div
+            class="flex flex-nowrap items-center w-full order-last md:order-none mt-5 md:mt-0 md:w-2/4 lg:w-2/4"
+          >
+            <input
+              class="flex-grow appearance-none border border-gray-200 rounded-md mr-2 py-2 px-3 hover:border-gray-400 focus:outline-none focus:border-gray-400"
+              type="text"
+              placeholder="Search..
+                "
+            />
+          </div>
+
+          <div class="flex items-center space-x-2 ml-auto">
+            <a
+              class="px-3 py-2 inline-block text-center text-gray-700 bg-slate-50 shadow-sm border border-gray-200 rounded-md hover:bg-gray-100 hover:border-gray-300"
+              href="/signin"
+            >
+              <span class="hidden lg:inline ml-1"> 👤 Sign in</span>
+            </a>
+            <a
+              class="px-3 py-2 inline-block text-center text-gray-700 bg-slate-50 shadow-sm border border-gray-200 rounded-md hover:bg-gray-100 hover:border-gray-300"
+              href="/addcake"
+            >
+              <span class="hidden lg:inline ml-1">🍰 Add Cake</span>
+            </a>
+
+            <a
+              class="px-3 py-2 inline-block text-center text-gray-700 bg-slate-50 shadow-sm border border-gray-200 rounded-md hover:bg-gray-100 hover:border-gray-300"
+            >
+              <span class="hidden lg:inline ml-1">🛒 My cart</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- navbar close -->
+    {% block body %}
+        
+    {% endblock body %}
+  </body>
+  </html>

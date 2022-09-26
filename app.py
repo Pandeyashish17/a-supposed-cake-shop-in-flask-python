@@ -1,4 +1,3 @@
-from email.mime import image
 from flask import Flask,render_template,request
 from flask_sqlalchemy import SQLAlchemy
 
@@ -26,6 +25,13 @@ def indexPage():
 
 
 
+@app.route('/delete')
+def deletePage():
+   allCakes = Cake.query.all()
+   return render_template("index.html",allCakes=allCakes)
+
+
+
 @app.route('/signin')
 def signInPage():
    return render_template("signin.html")   
@@ -43,6 +49,7 @@ def addCakePage():
       db.session.add(cake)
       db.session.commit()
    return render_template("addCake.html")   
+
 
 if __name__ == "__main__":
     app.run(debug=True)    
